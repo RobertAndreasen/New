@@ -7,7 +7,33 @@
 
 <body>
 
-<h1>Hello world!</h1>
+<?php
+
+class ticker {
+  var $count;
+  
+  function step (){
+    $this->count ++;
+    }
+
+}
+
+$ta = new ticker();
+$tb = new ticker();
+
+$ta->count = 0;
+$tb->count = 0;
+
+$ta->step();
+$ta->step();
+$ta->step();
+$ta->step();
+
+$tb->step();
+
+echo 'a:'.$ta->count.'<br />'.$tb->count;
+
+?>
 
 </body>
 </html>
